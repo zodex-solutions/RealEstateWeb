@@ -1,0 +1,1112 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.bar {
+  -ms-overflow-style: none;
+  scrollbar-width: 1px !important;
+}
+
+a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #2f5fa7;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 5px !important;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #2f5fa7;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #fff;
+}
+
+button:hover {
+  border-color: #2f5fa7;
+  scale: 101%;
+  cursor: pointer !important;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.HeroText {
+  font-size: 4vw;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffff;
+  }
+}
+
+p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+.heading {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+.subheading {
+  font-size: 24px !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+
+  .heading {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+  }
+  .subheading {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+}
+/* Add styling for the carousel to display multiple items */
+.carousel-container .slide {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.dateDialog {
+  /* height: ; */
+}
+
+.DropDownSelect {
+  max-width: 200px;
+  width: 100%;
+  height: 45px !important;
+  background-color: #fff;
+}
+@media (min-width: 640px) {
+  .carousel-container .slide {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 items for small-medium screens */
+    gap: 20px;
+  }
+}
+
+#DropDownMob {
+  padding: 0px 14px;
+  height: 45px !important;
+}
+#DropDownMap {
+  height: 45px !important;
+}
+
+.DropDownSelect {
+  /* padding: 10px 20px; */
+  max-width: 200px;
+  height: 40px;
+  background-color: #fff;
+}
+
+@media (max-width: 636px) {
+  .HeroText {
+    font-size: 7vw;
+  }
+}
+@media (max-width: 1023px) {
+  .HeroText {
+    font-size: 7vw;
+  }
+}
+@media (max-width: 500px) {
+  .HeroText {
+    font-size: 8vw;
+  }
+}
+@media (min-width: 768px) {
+  .cancelButton {
+    max-width: 95vw !important;
+  }
+  .carousel-container .slide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items for medium screens */
+    gap: 20px;
+  }
+  .HeroText {
+    /* font-size: 40px; */
+  }
+  #DropDownMob {
+    padding: 0px 15px;
+    height: 40px;
+  }
+  #DropDownMap {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-container .slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items for large screens */
+    gap: 20px;
+  }
+}
+
+/* Custom Swiper Navigation Buttons */
+:root {
+  --swiper-navigation-size: 30px; /* Adjust the size */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  margin-right: -25px !important;
+  margin-left: -25px !important;
+  color: #2f5fa7 !important; /* Change color */
+  width: 60px !important; /* Adjust width */
+  height: 60px !important; /* Adjust height */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 30px 30px 0;
+}
+
+.swiper-button-next {
+  border-radius: 30px 0 0 30px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-weight: bold !important;
+  font-size: 30px !important; /* Icon size */
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  background-color: #535bf2 !important;
+}
+
+.navigation-buttons button {
+  /* padding: 10px 20px; */
+  font-size: 16px;
+  margin: 0 -80px !important;
+  cursor: pointer;
+}
+
+/* .slick-prev,
+.slick-next {
+  font-size: 30px;
+  color: #000;
+} */
+.slick-slide {
+  /* margin: 0 10px; */
+}
+
+/* Custom styles for previous and next buttons */
+.slick-prev,
+.slick-next {
+  background-color: transparent;
+  border: 1px solid #2f5fa7 !important;
+  color: #2f5fa7 !important;
+  display: flex !important;
+
+  align-items: center !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+
+  height: 60px !important;
+  font-size: 0px !important;
+}
+
+.slick-prev {
+  justify-content: flex-end !important;
+  padding-right: 18px !important;
+}
+.slick-next {
+  padding-left: 18px !important;
+  justify-content: flex-start !important;
+}
+/* Add FontAwesome icons for previous and next buttons */
+.slick-prev::before {
+  content: "\f104" !important; /* Unicode for FontAwesome left arrow */
+  font-family: "Font Awesome 5 Free" !important; /* FontAwesome family */
+  font-weight: 900 !important; /* Required to make icons solid */
+  color: #2f5fa7 !important;
+  font-size: 30px !important;
+}
+
+.slick-next::before {
+  content: "\f105" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: bolder !important;
+  color: #2f5fa7 !important;
+  font-size: 30px !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #f4f4f4 !important; /* Hover background color */
+  color: red !important;
+}
+
+/* Adjust positioning */
+.slick-prev {
+  left: -54px !important; /* Position the left button */
+}
+
+.slick-next {
+  right: -54px !important; /* Position the right button */
+}
+
+/* Style the dots */
+
+/* Style the container for pagination dots */
+.slick-dots {
+  padding-bottom: 5px !important;
+  width: 155px !important;
+  border-radius: 25px !important;
+  background-color: white !important;
+  bottom: -40px !important; /* Adjust the vertical position of the dots */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Smooth shadow */
+  position: absolute;
+  left: 50%;
+  overflow: hidden !important;
+  max-height: 34px;
+  transform: translateX(-50%);
+}
+
+/* Style individual dots */
+.slick-dots li button:before {
+  font-size: 10px !important;
+  color: #2f5fa7 !important; /* Default color for inactive dots */
+  opacity: 1; /* Ensure visibility */
+  transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transition for color and size */
+}
+
+/* Style the active dot */
+.slick-dots li.slick-active button:before {
+  color: #ff5722; /* Active dot color */
+  font-size: 14px !important; /* Active dot size */
+}
+
+/* Add hover effect for pagination dots */
+.slick-dots li button:before:hover {
+  color: #007aff; /* Hover color */
+  font-size: 14px; /* Slightly bigger size on hover */
+}
+.slick-dots li {
+  margin: 0 0px !important;
+}
+
+/* Styling the active (centered) slide */
+.slick-center .slick-slide {
+  /* transform: scale(1.1); Enlarge the centered slide */
+  transition: transform 0.3s ease;
+}
+
+.slick-slide {
+  /* transition: transform 0.3s ease; */
+}
+/* Style each slide */
+.slick-slide {
+  padding: 0 0px; /* Adjust padding between slides */
+}
+.PerCommHighSwipper {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Style for BlogCardCompo */
+.slick-slide .BlogCardCompo {
+  border: 1px solid #ccc; /* Card border */
+  padding: 15px; /* Card padding */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* Card background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+}
+
+.ListingHeader {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 40;
+  margin: 0 -20px;
+  width: 100%;
+}
+
+.custom-slide-wrapper {
+  margin-bottom: 7px;
+}
+
+.custom-slide-wrapper {
+  padding-bottom: 7px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+/* @media (max-width: 639px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 300px);
+  }
+} */
+
+@media (max-width: 538px) {
+  .grid-container {
+    /* grid-template-columns: repeat(1, 100vw) !important; */
+  }
+}
+
+@media (max-width: 1023px) {
+  .ListingHeader {
+    margin: 0 5px;
+  }
+  .PerticularData {
+    margin-top: -50px;
+  }
+}
+/* Custom styles for small screens */
+@media (max-width: 695px) {
+  .slick-prev,
+  .slick-next {
+    display: none; /* Hide navigation buttons on small screens */
+  }
+
+  .slick-dots {
+    bottom: 0px; /* Adjust dots position */
+  }
+
+  .slick-slide .BlogCardCompo {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+#ListingItems {
+  margin-top: 26px !important;
+}
+
+@media (max-width: 767px) {
+  .ListingHeader {
+    margin: 0 0px;
+  }
+  .ListingHeader {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 59px;
+    padding: 0 17px 5px 17px;
+    right: 0;
+    left: 0;
+    z-index: 40;
+    width: 100%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  /* #ListingHeader {
+    display: absolute !important;
+    top: 40px !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+  } */
+  #ListingItems {
+    margin-top: 28px !important;
+  }
+  #ListingContent {
+    padding: 0 17px;
+  }
+  .IntrestOption {
+    margin-top: 180px !important;
+  }
+}
+
+@media (max-width: 765px) {
+  .FooterGet {
+    width: 45vw !important;
+  }
+}
+@media (max-width: 639px) {
+  .FooterGet {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1192px) {
+  #ListingItems {
+    margin-top: 125px;
+  }
+}
+/* IntrestOption */
+@media (max-width: 1218px) {
+  .dropSearch {
+    width: 195px !important;
+    /* width: 100% !important; */
+  }
+  .selectWidth {
+    margin-top: 15px;
+    height: 45px !important;
+    width: 195px !important;
+  }
+}
+@media (max-width: 1023px) {
+  .dropSearch {
+    width: 195px !important;
+    /* width: 100% !important; */
+  }
+  .selectWidth {
+    margin-top: 0px;
+    height: 45px !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 666px) {
+  .dropSearch {
+    /* width: 195px !important; */
+    width: 100% !important;
+  }
+  .selectWidth {
+    width: 100% !important;
+  }
+}
+@media (max-width: 662px) {
+  .dropSearch {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  /* .selectWidth {
+    width: 100% !important;
+  } */
+}
+@media (max-width: 639px) {
+  .selectWidth {
+    width: 98%;
+  }
+
+  .dateDialog {
+    /* height: 100vh; */
+    /* padding-top: 50px; */
+    /* margin-bottom: 80px !important; */
+    border-radius: 5px !important;
+    overflow-y: scroll;
+  }
+  .IntrestOption {
+    padding-top: 20px !important;
+  }
+  .bannerImagePer {
+    height: 24vw;
+  }
+}
+@media (max-width: 480px) {
+  .ImagePri {
+    margin-top: -20px;
+    /* height: 200%; */
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .horizontalImageConPro {
+    margin-right: -3% !important;
+  }
+  .hideImage {
+    display: none !important;
+  }
+  .bannerImagePer {
+    height: 60vw;
+  }
+}
+@media (max-width: 358px) {
+  .imgageComp {
+    max-width: 170px !important;
+  }
+}
+@media (max-width: 490px) {
+  .imgageComp {
+    max-width: 200px;
+  }
+  .IntrestOption {
+    margin-top: 200px !important;
+  }
+}
+@media (max-width: 458px) {
+  .IntrestOption {
+    margin-top: 225px !important;
+  }
+}
+@media (max-width: 345px) {
+  .IntrestOption {
+    margin-top: 245px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .slick-prev::before {
+    content: "\f104" !important; /* Unicode for FontAwesome left arrow */
+    font-family: "Font Awesome 5 Free" !important; /* FontAwesome family */
+    font-weight: 900 !important; /* Required to make icons solid */
+    color: #2f5fa7 !important;
+    font-size: 20px !important;
+  }
+
+  .slick-next::before {
+    content: "\f105" !important;
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: bolder !important;
+    color: #2f5fa7 !important;
+    font-size: 20px !important;
+  }
+  .slick-prev {
+    justify-content: flex-end !important;
+    padding-right: 0px !important;
+  }
+  .slick-next {
+    padding-left: 0px !important;
+    justify-content: flex-start !important;
+  }
+  .slick-prev,
+  .slick-next {
+    background-color: transparent;
+    border: 1px solid #2f5fa7 !important;
+    color: #2f5fa7 !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    font-size: 0px !important;
+  }
+  .slick-prev {
+    left: -50px !important; /* Position the left button */
+  }
+
+  .SliderMargin {
+    margin: 0 30px;
+  }
+
+  .slick-next {
+    right: -50px !important; /* Position the right button */
+  }
+  .FooterServices {
+    /* padding: 0px 0px; */
+  }
+  .FooterServices > h4 {
+    font-size: 10px !important;
+  }
+  .ProPhoneElement,
+  .ProEnvElement {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .PropertyButton {
+    padding: 0px px !important;
+    font-size: 14px;
+  }
+  .ProPrice {
+    font-size: 15px;
+  }
+  .ProPriceBlocks > span {
+    height: 20px;
+    font-size: 13px;
+  }
+
+  /* Calender ----------------------------------------------------------------------------------- */
+
+  /* .react-calendar {
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 2px;
+    margin-right: -10px !important;
+    margin-left: -12px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    background-color: #0056b3;
+  }
+
+  .react-calendar__month-view {
+    color: #000;
+    font-weight: 600 !important;
+    display: grid;
+    grid-template-columns: repeat(7);
+    gap: 4px !important;
+  }
+  .react-calendar__month-view__weekdays {
+    color: #000;
+    font-weight: 600 !important;
+    margin: auto;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: end !important;
+    margin-bottom: 10px;
+  }
+
+  .react-calendar__tile {
+    background: #fff;
+    color: #000;
+    border-radius: 5px !important;
+    width: 100%;
+    transition: all 0.2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .react-calendar__tile:hover {
+    background: #eaeaea;
+    outline: none;
+    border: none;
+    color: #000;
+  }
+
+  .react-calendar__tile--active {
+    background: #2f5fa7;
+    color: white;
+  } */
+}
+
+/* Calender ----------------------------------------------------------------------------------- */
+
+/* Styles for Booking Calendar Component */
+.booking-container {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-section {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+}
+
+.left-section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.left-section h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.left-section p {
+  color: #4b5563;
+}
+
+.right-section {
+  width: 50%;
+  padding: 20px;
+}
+
+.right-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.react-datepicker {
+  width: 100%;
+  font-size: 20px !important;
+  border-radius: 5px !important;
+
+  border: none !important;
+}
+
+.react-datepicker__header {
+  width: 100%;
+  background-color: transparent !important;
+}
+.react-datepicker__day {
+  border-radius: 50%;
+  margin: 10px !important;
+}
+.react-datepicker__day--selected {
+  background-color: #1e40af !important;
+  color: white !important;
+  border-radius: 50%;
+  /* margin: 10px !important; */
+}
+
+/* .react-datepicker__day:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+} */
+
+/* ========================================= */
+
+/* .custom-date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+} */
+
+/* Styling the input field */
+/* .date-input {
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid #d1dce5;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+} */
+
+.date-input:focus {
+  box-shadow: none;
+}
+
+.custom-calendar {
+  margin-top: 1px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  border-radius: 8px 0px 0px 8px;
+  height: 310px;
+}
+
+/* Header  styling */
+.react-datepicker__header {
+  color: white !important;
+  border: none !important;
+  padding: 6px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
+/* Hover effect on day cells */
+.react-datepicker__day:hover {
+  background-color: #2f5fa7 !important;
+  color: white !important;
+}
+
+/* Selected day styling */
+.react-datepicker__day--selected {
+  background-color: #2f5fa7 !important;
+  color: white !important;
+  border-radius: 15%;
+}
+
+.react-datepicker__day-name {
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 17px !important;
+}
+
+.react-datepicker__current-month {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.react-datepicker__navigation {
+  top: 6px;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white;
+}
+
+.react-datepicker__time-container {
+  z-index: 0;
+  top: -0.5px;
+  width: 140px !important;
+  border: none !important;
+  /* border-radius: 0px 8px 7px 0; */
+  right: -85px;
+}
+.react-datepicker__time {
+  border: none !important;
+  outline: none !important;
+  font-size: 15px !important;
+  width: 140px !important;
+  overflow: auto;
+  /* height: 220px; */
+}
+/* Time 12:00 AM */
+.react-datepicker__time-list-item {
+  font-size: 20px !important;
+  font-size: 14px;
+  color: #333;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.react-datepicker__time-list-item:hover {
+  background-color: #e6f2ff;
+}
+.react-datepicker__time-list-item--selected {
+  background-color: #2f5fa7 !important;
+  border-radius: 0% !important;
+  color: white;
+  font-weight: bold;
+}
+
+/* Highlighting the current time */
+.react-datepicker__time-list-item--selected:hover {
+  background-color: #0056b3;
+}
+
+/* html  */
+.custom-datetime-input {
+  color: white;
+  background-color: transparent !important;
+  border-bottom: 1px solid #d1dce5;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 80%;
+  outline: none;
+  appearance: none;
+}
+
+/* Placeholder styling */
+.custom-datetime-input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter white for placeholder */
+}
+
+/* Calendar and clock icons styling (if supported by browser) */
+.custom-datetime-input::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Inverts colors for light-themed icons */
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* ====================== calander =========== */
+/* CalendarCompo.css */
+
+.react-calendar {
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+
+  border: 1px solid rgb(221, 221, 221);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  color: #fff;
+}
+
+.react-calendar__month-view {
+  color: #000;
+  font-weight: 600 !important;
+  display: grid;
+  grid-template-columns: repeat(7);
+  gap: 4px !important;
+}
+.react-calendar__month-view__weekdays {
+  color: #000;
+  font-weight: 600 !important;
+  margin: auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: end !important;
+  margin-bottom: 10px;
+}
+
+.react-calendar__tile {
+  background: #fff;
+  color: #000;
+  border-radius: 5px !important;
+  width: 100%;
+  transition: all 0.2s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.react-calendar__tile:hover {
+  background: #eaeaea;
+  outline: none;
+  border: none;
+  color: #000;
+}
+
+.react-calendar__tile--active {
+  background: #2f5fa7;
+  color: white;
+}
+
+/* 
+
+
+
+
+ */
+
+/* .react-calendar__tile {
+  border-radius: 5px !important;
+  padding: 5px;
+  margin: 5px;
+  transition: all 0.2s;
+  color: white;
+}
+
+.react-calendar__tile {
+  background: #fff;
+  color: #000;
+}
+.react-calendar__tile:hover {
+  background: #2f5fa7;
+  color: #fff;
+}
+
+.react-calendar__tile--active {
+  background: #2f5fa7;
+  color: white;
+}
+ */
+
+/* Navigation buttons (Previous/Next month) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  border-radius: 5px;
+}
+.react-calendar__navigation button {
+  background: transparent;
+  border: 1px solid rgb(185, 184, 184) !important;
+  color: #000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button:hover {
+  background: #2f5fa7; /* Darker blue on hover */
+}
+
+/* Disable navigation buttons when they are inactive */
+.react-calendar__navigation button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* ==================================================================== */
+
+/* App CSS */
+.rendered-content table {
+  margin-top: 12px;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border: none !important;
+}
+.rendered-content th,
+.rendered-content td {
+  border: 0.5px solid #919191;
+  padding: 10px 0 !important;
+  padding: 8px;
+}
+.rendered-content th {
+  /* background-color: #0056b3 !important; */
+  background-color: #b3b3b3 !important;
+}
+
+.out {
+  height: 100%;
+}
+
+/* Target the InfoWindow close button */
+.gm-style-iw button.gm-ui-hover-effect {
+  border-radius: 50% !important;
+  top: -3px !important;
+  right: -3px !important;
+  border: none;
+  outline: none;
+}
+
+/* Customize the close button icon (X) */
+.gm-style-iw button.gm-ui-hover-effect > span {
+  color: white !important;
+  font-size: 16px !important;
+}
