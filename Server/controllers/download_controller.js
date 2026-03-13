@@ -26,7 +26,7 @@ const createBrochureRequest = async (req, res) => {
       secure: true,
       auth: {
         user: Email,
-        pass: "IN@#$%009q", // Your email password
+        pass: "DNS@#$%009inQ", // Your email password
       },
     });
 

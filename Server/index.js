@@ -18,7 +18,7 @@ const port = 8080;
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: ["*" , "http://localhost:5173"],
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
@@ -143,7 +143,7 @@ app.get("/download-images", (req, res) => {
 });
 
 // Routers
-// app.use("/api", Router);
+app.use("/api", Router);
 app.use("/uploads", express.static("uploads"));
 
 app.listen(8080, "0.0.0.0", () => {

@@ -34,7 +34,9 @@ const createQuery = async (req, res) => {
       secure: true,
       auth: {
         user: Email,
-        pass: "IN@#$%009q", // Your email password
+        // pass :"acso rdhx yzqz sqhk"
+        pass: "DNS@#$%009inQ", 
+        // pass: "IN@#$%009q", 
       },
     });
 
@@ -57,6 +59,7 @@ const createQuery = async (req, res) => {
     await query.save();
     res.status(201).json({ message: "Query submitted successfully", query });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error: error.message });
   }
 };
