@@ -22,19 +22,10 @@ const MapComponent = ({ lat, long, propertyData }) => {
     lng: parseFloat(long),
   };
 
-  // console.log("defaultCenter", defaultCenter);
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
   const [mapType, setMapType] = useState("roadmap");
 
-  // const handleMarkerClick = () => {
-  //   setSelected({
-  //     label: propertyData.title,
-
-  //     description: propertyData.description,
-  //     ...defaultCenter,
-  //   });
-  // };
 
   const handleMapLoad = (mapInstance) => {
     setMap(mapInstance);
@@ -72,7 +63,6 @@ const MapComponent = ({ lat, long, propertyData }) => {
           onLoad={handleMapLoad}
         >
           <Marker position={defaultCenter} />
-          {/* onClick={handleMarkerClick} */}
           {selected && (
             <InfoWindow
               position={{ lat: selected.lat, lng: selected.lng }}
@@ -81,22 +71,7 @@ const MapComponent = ({ lat, long, propertyData }) => {
               <div>{selected.label}</div>
             </InfoWindow>
           )}
-          {/* {selected && (
-            <InfoWindow
-              position={{
-                lat: parseFloat(selected.lat),
-                lng: parseFloat(selected.lng),
-              }}
-              onCloseClick={() => setSelected(null)}
-            >
-              <div>
-                <img src={pro.image} className="w-20  absolute top-3 " />
-                <p className="mt-4 text-xl !font-semibold">{pro.title}</p>
-                <p>{pro.price}</p>
-                <p>{pro.location}</p>
-              </div>
-            </InfoWindow>
-          )} */}
+         
         </GoogleMap>
       </LoadScript>
 

@@ -91,8 +91,7 @@ const ContactUs = () => {
                   <FaMapMarkerAlt className="text-[#2f5fa7] !text-[22px] mt-1" />
                 </div>
                 <span className="!text-lg">
-                  DNS Real Estate LLC, 2503-022, 25th Floor, IRIS Bay, Business
-                  Bay, Dubai, UAE
+                  PO BOX NO. 12391, 102, Burlington Tower, Business Bay, Dubai, U.A.E.
                 </span>
               </div>
             </div>

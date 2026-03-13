@@ -70,8 +70,7 @@ export default function ContactUs() {
                 </div>
               </div>
               <span className="text-lg !text-[#fff] cursor-default">
-                DNS Real Estate LLC, 2503-022, 25th Floor, IRIS Bay, Business
-                Bay, Dubai, UAE
+                PO BOX NO. 12391, 102, Burlington Tower, Business Bay, Dubai, U.A.E.
               </span>
             </div>
           </div>
